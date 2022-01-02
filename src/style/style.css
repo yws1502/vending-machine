@@ -1,3 +1,8 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   background-color: #EAE8FE;
   font-size: 10px;
@@ -40,8 +45,8 @@ body {
 .beverage-cont .item-cont {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (94px)[3];
+      grid-template-columns: repeat(3, 94px);
   gap: 1.2em;
 }
 
@@ -90,7 +95,7 @@ body {
 }
 
 .beverage-cont .item-cont .item .btn-item .item-price {
-  font-size: 1.2em;
+  font-size: 1em;
   padding: .5em 1.5em;
   border-radius: 20px;
 }
@@ -132,7 +137,7 @@ body {
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 5px;
-  width: 31%;
+  width: 94px;
 }
 
 [class$="btn"]:active {
@@ -182,27 +187,32 @@ ul[class$="basket"] li em {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-bottom: 11px;
 }
 
 .beverage-counter .show-money-text {
-  width: 56%;
+  width: 200px;
+  margin-right: 12px;
+  padding: 7px 4px;
 }
 
 .beverage-counter #inputMoney {
-  width: 61%;
-  padding: .7em;
-  padding-right: 0;
+  width: 200px;
   border: 1.5px solid #BDBDBD;
   border-radius: 5px;
+  margin-right: 12px;
+  padding: 7px 4px;
 }
 
 .beverage-counter .counter-basket {
-  width: 56%;
+  width: 200px;
   height: 134px;
+  margin-right: 12px;
+  padding: 7px 4px;
+}
+
+.beverage-counter .counter-basket .basket-item {
+  cursor: pointer;
 }
 
 .beverage-counter .counter-basket .basket-item:active::before {
@@ -252,5 +262,31 @@ ul[class$="basket"] li em {
 .basket-cont .total-price {
   float: right;
   font-size: 1.2em;
+}
+
+@media (max-width: 400px) {
+  body {
+    background-color: #FFF;
+  }
+  .header .title {
+    margin-bottom: 20px;
+  }
+  .header .title img {
+    width: 166px;
+  }
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+    margin-bottom: 70px;
+  }
+  .container .order-section {
+    padding-bottom: 0;
+  }
+  .container .my-basket::before {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

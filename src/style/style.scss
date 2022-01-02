@@ -2,6 +2,10 @@
 
 // common
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: $pastel-color;
   font-size: 10px;
@@ -44,7 +48,7 @@ body {
   margin-bottom: 20px;
   .item-cont {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 94px);
     gap: 1.2em;
     .item {
       position: relative;
@@ -73,7 +77,7 @@ body {
           margin-bottom: 7px;
         }
         .item-price {
-          font-size: 1.2em;
+          font-size: 1em;
           padding: .5em 1.5em;
           border-radius: 20px;
         }
@@ -116,7 +120,7 @@ body {
   font-weight: 700;
   box-shadow: $box-shadow;
   border-radius: 5px;
-  width: 31%;
+  width: 94px;
   &:active {
     box-shadow: none;
   }
@@ -159,32 +163,39 @@ ul[class$="basket"] {
 .beverage-counter {
   .flex-wrap {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     margin-bottom: 11px;
   }
   // overiding
   .show-money-text {
-    width: 56%;
+    width: 200px;
+    margin-right: 12px;
+    padding: 7px 4px;
   }
   #inputMoney {
-    width: 61%;
-    padding: .7em;
-    padding-right: 0;
+    width: 200px;
     border: 1.5px solid $gray-color;
     border-radius: 5px;
+    margin-right: 12px;
+    padding: 7px 4px;
   }
-
-  // overiding
+  
+  // overiding1
   .counter-basket {
-    width: 56%;
+    width: 200px;
     height: 134px;
-    .basket-item:active::before {
+    margin-right: 12px;
+    padding: 7px 4px;
+    .basket-item {
+      cursor: pointer;
+      &:active::before {
       content: "";
       position: absolute;
       top: 0; bottom: 0;
-      left: 0; right: 0;
-      border: 3px solid $blue-color;
-      border-radius: 5px;
+        left: 0; right: 0;
+        border: 3px solid $blue-color;
+        border-radius: 5px;
+      }
     }
   }
 }
@@ -227,5 +238,33 @@ ul[class$="basket"] {
   .total-price {
     float: right;
     font-size: 1.2em;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    background-color: #FFF;
+  }
+
+  .header .title{
+    margin-bottom: 20px;
+    img {
+      width: 166px;
+    }
+  } 
+
+  .container {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 70px;
+    .order-section {
+      padding-bottom: 0;
+    }
+    .my-basket {
+      &::before {
+        display: none;
+      }
+    }
+    
   }
 }
