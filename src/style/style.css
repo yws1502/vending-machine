@@ -1,0 +1,256 @@
+body {
+  background-color: #EAE8FE;
+  font-size: 10px;
+}
+
+.blue {
+  background-color: #6327FE;
+  color: #FFF;
+}
+
+.header .title {
+  text-align: center;
+  margin-bottom: 84px;
+}
+
+.header .title img {
+  width: 386px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+  margin-bottom: 200px;
+}
+
+.order-section {
+  background-color: #FFF;
+  padding: 3em 2.7em;
+}
+
+.beverage-cont {
+  margin-bottom: 20px;
+}
+
+.beverage-cont .item-cont {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 1.2em;
+}
+
+.beverage-cont .item-cont .item {
+  position: relative;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+}
+
+.beverage-cont .item-cont .item:active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 3px solid #6327FE;
+  border-radius: 10px;
+}
+
+.beverage-cont .item-cont .item .btn-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: .9em 1.3em;
+}
+
+.beverage-cont .item-cont .item .btn-item .item-img {
+  width: 36px;
+  margin-bottom: .6em;
+}
+
+.beverage-cont .item-cont .item .btn-item .item-label {
+  font-size: .9em;
+  margin-bottom: 7px;
+}
+
+.beverage-cont .item-cont .item .btn-item .item-price {
+  font-size: 1.2em;
+  padding: .5em 1.5em;
+  border-radius: 20px;
+}
+
+.soldout {
+  position: relative;
+  pointer-events: none;
+}
+
+.soldout::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  background-image: url(../img/Sold-out.png);
+  background-size: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+[class$="text"] {
+  background-color: #EAE8FE;
+  font-size: 1.4em;
+  border-radius: 3px;
+  padding: .7em 1em;
+}
+
+[class$="text"] em {
+  float: right;
+}
+
+[class$="btn"] {
+  font-size: 1.3em;
+  font-weight: 700;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+  width: 31%;
+}
+
+[class$="btn"]:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+ul[class$="basket"] {
+  background-color: #EAE8FE;
+  border: 1.5px solid #BDBDBD;
+  border-radius: 5px;
+  padding: 1.2em;
+  padding-bottom: 0;
+  overflow-y: scroll;
+}
+
+ul[class$="basket"] li + li {
+  margin-top: 6px;
+}
+
+ul[class$="basket"] li {
+  position: relative;
+  background-color: #FFF;
+  border-radius: 5px;
+  padding: .7em;
+}
+
+ul[class$="basket"] li img {
+  width: 18px;
+  margin-right: 10px;
+}
+
+ul[class$="basket"] li strong {
+  font-size: .9em;
+  vertical-align: 13px;
+}
+
+ul[class$="basket"] li em {
+  border: 1.5px solid #BDBDBD;
+  float: right;
+  font-size: 1.4em;
+  border-radius: 5px;
+  padding: .6em;
+}
+
+.beverage-counter .flex-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 11px;
+}
+
+.beverage-counter .show-money-text {
+  width: 56%;
+}
+
+.beverage-counter #inputMoney {
+  width: 61%;
+  padding: .7em;
+  padding-right: 0;
+  border: 1.5px solid #BDBDBD;
+  border-radius: 5px;
+}
+
+.beverage-counter .counter-basket {
+  width: 56%;
+  height: 134px;
+}
+
+.beverage-counter .counter-basket .basket-item:active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 3px solid #6327FE;
+  border-radius: 5px;
+}
+
+.my-basket {
+  position: relative;
+  background-color: #FFF;
+  padding: 1em 2.7em 0;
+}
+
+.my-basket::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 54px;
+  height: 20px;
+  background-color: #EAE8FE;
+}
+
+.money-section {
+  margin-bottom: 5.4em;
+}
+
+.basket-cont .basket-title {
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-bottom: 1.3em;
+}
+
+.basket-cont .get-beverage-basket {
+  width: 306px;
+  height: 394px;
+  margin-bottom: 1em;
+}
+
+.basket-cont .total-price {
+  float: right;
+  font-size: 1.2em;
+}
+/*# sourceMappingURL=style.css.map */
