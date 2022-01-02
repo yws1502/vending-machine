@@ -33,8 +33,9 @@ body {
 .container {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 30px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 
@@ -207,7 +208,7 @@ ul[class$="basket"] {
 .my-basket {
   position: relative;
   background-color: #FFF;
-  padding: 1em 2.7em 0;
+  padding: 1.4em 2.7em;
   &::before {
     content: "";
     position: absolute;
@@ -232,7 +233,7 @@ ul[class$="basket"] {
   // overiding
   .get-beverage-basket {
     width: 306px;
-    height: 394px;
+    height: 400px;
     margin-bottom: 1em;
   }
   .total-price {
@@ -241,7 +242,7 @@ ul[class$="basket"] {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   body {
     background-color: #FFF;
   }
@@ -256,7 +257,7 @@ ul[class$="basket"] {
   .container {
     flex-direction: column;
     gap: 0;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     .order-section {
       padding-bottom: 0;
     }

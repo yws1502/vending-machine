@@ -29,8 +29,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 30px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .order-section {
@@ -229,7 +232,7 @@ ul[class$="basket"] li em {
 .my-basket {
   position: relative;
   background-color: #FFF;
-  padding: 1em 2.7em 0;
+  padding: 1.4em 2.7em;
 }
 
 .my-basket::before {
@@ -255,7 +258,7 @@ ul[class$="basket"] li em {
 
 .basket-cont .get-beverage-basket {
   width: 306px;
-  height: 394px;
+  height: 400px;
   margin-bottom: 1em;
 }
 
@@ -264,7 +267,7 @@ ul[class$="basket"] li em {
   font-size: 1.2em;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   body {
     background-color: #FFF;
   }
@@ -280,7 +283,7 @@ ul[class$="basket"] li em {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 0;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
   }
   .container .order-section {
     padding-bottom: 0;
